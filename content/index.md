@@ -1,6 +1,9 @@
-# Hello fen 🌌
+---
+title: Trang chủ
+---
+# Hello 
 
 Đây là nơi mình chia sẻ các ghi chú khi học Toán :) 
 
 📚 **Ghi chú về môn:**
-- [[Lý thuyết Galois dành cho bé]]
+-  [[ly-thuyet-galois|Lý thuyết Galois dành cho bé]]
