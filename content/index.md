@@ -1,7 +1,7 @@
 ---
-title: Trang chủ
+title: Hey heyy
 ---
-# Hello 
+
 
 Đây là nơi mình chia sẻ các ghi chú khi học Toán :) 
 
