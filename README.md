@@ -1,17 +1,12 @@
-# Quartz v5
+# AK Maths notes
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Đây là nơi mình chia sẻ các ghi chú khi học Toán :)
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+🌐 **Ghé web tại:** [akmathsnotes.netlify.app](https://akmathsnotes.netlify.app)
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+---
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+🌱 **Về mã nguồn:**
+- Trang web được xây dựng dựa trên template [Quartz v5](https://quartz.jzhao.xyz/).
+- Cảm ơn tác giả [Jacky Zhao (jackyzha0)](https://github.com/jackyzha0) đã tạo ra template siêu này!
 
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
