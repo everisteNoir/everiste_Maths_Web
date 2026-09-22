@@ -3,16 +3,27 @@
 // ==========================================
 // 1. GIAO DIỆN CHUNG: NỀN BẢNG ĐEN VÀ BIẾN MÀU CƠ BẢN
 // ==========================================
-body, .page {
-  background-color: #08080a !important; 
+body,
+.page {
+  background-color: #08080a !important;
   background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  max-width: 100vw !important;
-  width: 100% !important;
+}
+
+body {
   margin: 0 !important;
   padding: 0 !important;
-  display: flex !important;
-  gap: 0 !important;
-  position: relative !important; 
+}
+
+.page {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+}
+
+.page > #quartz-body {
+  width: 100%;
+  min-width: 0;
 }
 
 // ==========================================
@@ -23,108 +34,147 @@ body, .page {
   top: 0 !important;
   left: 0 !important;
   height: 100vh !important;
-  width: 280px !important;
-  background-color: transparent !important; 
+  height: 100dvh !important;
+  min-height: 0 !important;
+  width: auto !important;
+  background-color: transparent !important;
   border-right: none !important;
   padding: 2rem 1.5rem !important;
   display: flex !important;
   flex-direction: column !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
-.left.sidebar * { color: #dcdcdc !important; }
-.left.sidebar a:hover { color: #00d2ff !important; }
+.left.sidebar * {
+  color: #dcdcdc !important;
+}
+.left.sidebar a:hover {
+  color: #00d2ff !important;
+}
 
-.left.sidebar .page-title { order: 1 !important; margin-bottom: 2rem !important; font-size: 1.25rem !important; }
-.left.sidebar .graph { order: 2 !important; margin-bottom: 1.5rem !important; }
-.left.sidebar footer { order: 99 !important; margin-top: auto !important; margin-bottom: 1.5rem !important; opacity: 0.5 !important; }
+.left.sidebar .page-title {
+  order: 1 !important;
+  flex-shrink: 0;
+  margin-bottom: 2rem !important;
+  font-size: 1.25rem !important;
+}
+.left.sidebar .graph {
+  order: 2 !important;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem !important;
+}
+.left.sidebar footer {
+  order: 99 !important;
+  flex-shrink: 0;
+  margin-top: auto !important;
+  margin-bottom: 1.5rem !important;
+  opacity: 0.5 !important;
+}
 
 // --- Định dạng khung hình chữ nhật cho chữ Home ---
 .page-title a {
   background-color: #333338 !important;
-  padding: 10px 16px !important;      
-  display: inline-block !important;   
-  border-radius: 8px !important;      
-  text-decoration: none !important;     
-  color: #ffffff !important;          
-  transition: all 0.2s ease !important; 
+  padding: 10px 16px !important;
+  display: inline-block !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  transition: all 0.2s ease !important;
   text-align: center !important;
 }
 
 .page-title a:hover {
-  background-color: #444444 !important; 
-  transform: scale(1.05) !important;   
+  background-color: #444444 !important;
+  transform: scale(1.05) !important;
 }
 
 // --- Định dạng nút Darkmode ---
 .darkmode {
   position: fixed !important;
-  top: 80px !important;    
-  left: 25px !important; 
+  top: 80px !important;
+  left: 25px !important;
   z-index: 99999 !important;
 }
 
 button.darkmode {
   background-color: #333338 !important;
-  padding: 10px 16px !important;       
-  display: flex !important;             
+  padding: 10px 16px !important;
+  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  border-radius: 8px !important;        
-  border: none !important;             
-  cursor: pointer !important;          
-  transition: all 0.2s ease !important; 
-  color: #ffffff !important; 
+  border-radius: 8px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  color: #ffffff !important;
 }
 
 button.darkmode svg {
-  width: 20px !important;              
-  height: 20px !important;              
-  fill: #ffffff !important;            
+  width: 20px !important;
+  height: 20px !important;
+  fill: #ffffff !important;
 }
 
 button.darkmode:hover {
   background-color: #444444 !important;
-  transform: scale(1.05) !important;    
+  transform: scale(1.05) !important;
 }
 
 .right.sidebar {
-  display: block !important;
-  position: static !important;
+  display: flex !important;
+  position: sticky !important;
+  top: 0 !important;
   width: auto !important;
-  height: auto !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 // ==========================================
 // 4. KHU VỰC CỘT GIỮA: TỜ GIẤY BÀI VIẾT (.center)
 // ==========================================
 .center {
-  background-color: #ffffff !important; 
-  flex: 1 !important; 
-  max-width: none !important; 
-  margin: 130px 2rem 2rem 0 !important; 
-  position: relative !important; 
-  padding: 3rem 4rem !important; 
+  background-color: #ffffff !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 130px 0 2rem !important;
+  position: relative !important;
+  padding: 3rem 4rem !important;
   padding-top: 0.5rem !important;
   border-top: 3px solid #007acc !important; /* Xanh dương */
-  border-radius: 4px !important; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-  min-height: calc(100vh - 150px) !important; 
+  border-radius: 4px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  min-height: calc(100vh - 150px) !important;
+  min-height: calc(100dvh - 150px) !important;
   display: flex !important;
   flex-direction: column !important;
-  transition: background-color 0.3s ease !important; 
+  transition: background-color 0.3s ease !important;
 }
 
 .center .article-title {
   position: absolute !important;
-  top: -125px !important;                  
+  top: -125px !important;
   left: 50% !important;
-  transform: translateX(-50%) !important; 
-  font-size: 3rem !important; 
+  transform: translateX(-50%) !important;
+  width: calc(100% - 2rem);
+  max-width: 100%;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  line-height: 1.1;
+  text-align: center;
   font-family: "Lora", "Merriweather", serif !important;
-  color: #b7b7b7 !important;              
-  white-space: nowrap !important;
+  color: #b7b7b7 !important;
+  white-space: normal !important;
+  text-wrap: balance;
 }
 
 .center > header,
@@ -140,7 +190,7 @@ button.darkmode:hover {
   padding-top: 0 !important;
 }
 
-article > h1:first-child, 
+article > h1:first-child,
 article > h2:first-child,
 article > p:first-child {
   margin-top: 0 !important;
@@ -157,17 +207,15 @@ article > p:first-child {
 
 // --- SEARCH ---
 .search {
-  position: fixed !important;
-  top: 20px !important;
-  right: 10px !important;
-  z-index: 99999 !important;
+  position: static !important;
+  width: 100%;
 }
 
 .search-button {
   background-color: #1a1a20 !important;
   border: 1px solid #333338 !important;
   border-radius: 6px !important;
-  width: 180px !important;
+  width: 100% !important;
   height: 38px !important;
   display: flex !important;
   align-items: center !important;
@@ -189,20 +237,16 @@ article > p:first-child {
 }
 
 .explorer {
-  position: fixed !important;
-  top: 70px !important;
-  right: 20px !important;
-  left: auto !important;
-  z-index: 99999 !important;
-  width: 155px !important;       
+  position: static !important;
+  width: 100% !important;
   box-sizing: border-box !important;
-  max-height: 85vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important; 
+  max-height: none !important;
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
 }
 
 .explorer.collapsed {
-  width: 155px !important;       
+  width: 100% !important;
   max-height: 1.2rem !important;
   overflow: hidden !important;
 }
@@ -242,32 +286,248 @@ article > p:first-child {
 // ==========================================
 
 /* --- A. Trạng thái Light Mode (Mặc định) --- */
-html[saved-theme="light"] .center * { color: #333333 !important; }
-html[saved-theme="light"] .center h1, 
-html[saved-theme="light"] .center h2, 
-html[saved-theme="light"] .center h3 { color: #111111 !important; font-weight: 600 !important; }
-html[saved-theme="light"] .center a { color: #007acc !important; text-decoration: none !important; }
+html[saved-theme="light"] .center * {
+  color: #333333 !important;
+}
+html[saved-theme="light"] .center h1,
+html[saved-theme="light"] .center h2,
+html[saved-theme="light"] .center h3 {
+  color: #111111 !important;
+  font-weight: 600 !important;
+}
+html[saved-theme="light"] .center a {
+  color: #007acc !important;
+  text-decoration: none !important;
+}
 
 /* --- B. Trạng thái Dark Mode (Khi gạt nút) --- */
 html[saved-theme="dark"] .center {
-  background-color: #1e1e1e !important; 
-  border-top: 3px solid #5365be !important; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important; 
+  background-color: #1e1e1e !important;
+  border-top: 3px solid #5365be !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
 }
 
-html[saved-theme="dark"] .center * { color: #e0e0e0 !important; }
-html[saved-theme="dark"] .center h1, 
-html[saved-theme="dark"] .center h2, 
-html[saved-theme="dark"] .center h3 { color: #ffffff !important; font-weight: 600 !important; }
-html[saved-theme="dark"] .center a { color: #4b89f3 !important; text-decoration: none !important; } 
+html[saved-theme="dark"] .center * {
+  color: #e0e0e0 !important;
+}
+html[saved-theme="dark"] .center h1,
+html[saved-theme="dark"] .center h2,
+html[saved-theme="dark"] .center h3 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+html[saved-theme="dark"] .center a {
+  color: #4b89f3 !important;
+  text-decoration: none !important;
+}
 
 // ==========================================
 // 7. BẢO VỆ TIÊU ĐỀ CHÍNH LUÔN SÁNG
-// ========================================== 
+// ==========================================
 html[saved-theme="light"] .center h1.article-title,
 html[saved-theme="dark"] .center h1.article-title,
 .center h1.article-title {
-  color: #ffffff !important; 
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 1) !important; 
+  color: #ffffff !important;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 1) !important;
   opacity: 1 !important;
+}
+
+// ==========================================
+// 8. RESPONSIVE: TABLET, MOBILE VÀ VIEWPORT THẤP
+// ==========================================
+@media all and (min-width: 1400px) {
+  .right.sidebar {
+    padding: 2rem 1.25rem !important;
+  }
+
+  .right.sidebar > .flex-component {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 999px) {
+  .right.sidebar {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 1rem 0 2rem !important;
+    overflow: visible !important;
+    scrollbar-gutter: auto;
+  }
+
+  .right.sidebar > * {
+    max-height: none !important;
+  }
+
+  .right.sidebar > .flex-component {
+    width: 100%;
+  }
+}
+
+// Compact desktop: keep three columns, but collapse both side rails so that
+// browser side panels and narrower windows cannot force horizontal overflow.
+@media all and (min-width: 1000px) and (max-width: 1399px) {
+  .page > #quartz-body {
+    grid-template-columns: 150px minmax(0, 1fr) 220px !important;
+    grid-template-rows: auto auto auto !important;
+    grid-template-areas:
+      "grid-sidebar-left grid-header grid-sidebar-right"
+      "grid-sidebar-left grid-center grid-sidebar-right"
+      "grid-sidebar-left grid-footer grid-sidebar-right" !important;
+  }
+
+  .left.sidebar {
+    width: auto !important;
+    padding: 1.25rem 0.75rem !important;
+    align-items: center;
+  }
+
+  .left.sidebar .page-title {
+    margin-bottom: 0 !important;
+  }
+
+  .left.sidebar .graph,
+  .left.sidebar footer {
+    display: none !important;
+  }
+
+  .darkmode {
+    left: 49px !important;
+  }
+
+  .right.sidebar {
+    position: sticky !important;
+    width: auto !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    padding: 1.25rem 1rem !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  .right.sidebar > .flex-component {
+    width: 100%;
+  }
+
+  .center {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
+  }
+}
+
+// Tablet: use a slim HOME rail and move Search/Explorer underneath the article.
+@media all and (min-width: 801px) and (max-width: 999px) {
+  .page > #quartz-body {
+    grid-template-columns: 140px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto auto !important;
+    grid-template-areas:
+      "grid-sidebar-left grid-header"
+      "grid-sidebar-left grid-center"
+      "grid-sidebar-left grid-sidebar-right"
+      "grid-sidebar-left grid-footer" !important;
+  }
+
+  .left.sidebar {
+    width: auto !important;
+    padding: 1.25rem 0.5rem !important;
+    align-items: center;
+  }
+
+  .left.sidebar .page-title {
+    margin-bottom: 0 !important;
+  }
+
+  .left.sidebar .graph,
+  .left.sidebar footer {
+    display: none !important;
+  }
+
+  .darkmode {
+    left: 44px !important;
+  }
+
+  .center {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .page > #quartz-body {
+    grid-template-areas:
+      "grid-sidebar-left"
+      "grid-sidebar-right"
+      "grid-header"
+      "grid-center"
+      "grid-footer" !important;
+    padding: 0 1rem !important;
+  }
+
+  .left.sidebar {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 1rem 0 0 !important;
+    overflow: visible !important;
+    scrollbar-gutter: auto;
+  }
+
+  .left.sidebar .page-title {
+    margin: 0 !important;
+  }
+
+  .left.sidebar .graph,
+  .left.sidebar footer {
+    display: none !important;
+  }
+
+  .darkmode {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    left: auto !important;
+    z-index: 100 !important;
+  }
+
+  .right.sidebar {
+    margin-top: 0.75rem !important;
+    padding: 0 0 1rem !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  .center {
+    width: 100% !important;
+    min-height: calc(100dvh - 8rem) !important;
+    margin: 5rem 0 1rem !important;
+    padding: 0.75rem 1rem 2rem !important;
+  }
+
+  .center .article-title {
+    top: -4.25rem !important;
+    width: 100%;
+    font-size: clamp(1.75rem, 9vw, 2.5rem) !important;
+  }
+
+  .search-button {
+    min-height: 44px;
+  }
+
+  .explorer {
+    max-height: min(50dvh, 24rem) !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media all and (max-height: 560px) and (min-width: 1000px) {
+  .left.sidebar,
+  .right.sidebar {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .left.sidebar .page-title {
+    margin-bottom: 1rem !important;
+  }
 }

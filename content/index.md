@@ -11,8 +11,8 @@ title: AK Maths notes
 Nếu phát hiện sai sót trong các bài viết vui lòng liên hệ mình thông qua email: shadowlord314@duck.com
 
 📚 **Ghi chú về môn:**
-- [[galois-theory/ly-thuyet-galois|Lý thuyết Galois dành cho bé]]
-- [[functional-analysis/giai-tich-ham|Giải tích hàm cho thiếu nhi]]
+- [[pdf-notes/galois_for_babi.pdf|Lý thuyết Galois dành cho bé]]
+- [[pdf-notes/func_analysis.pdf|Giải tích hàm cho thiếu nhi]]
 
 
 Upcoming: Lý thuyết Galois dưới góc nhìn phàm trù (dành cho bé), lý thuyết số cho sinh vật đơn bào, lý thuyết biểu diễn dành cho bé,...
