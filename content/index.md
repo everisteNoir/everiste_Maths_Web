@@ -13,6 +13,8 @@ Nếu phát hiện sai sót trong các bài viết vui lòng liên hệ mình th
 📚 **Ghi chú về môn:**
 - [[pdf-notes/galois_for_babi.pdf|Lý thuyết Galois dành cho bé]]
 - [[pdf-notes/func_analysis.pdf|Giải tích hàm cho thiếu nhi]]
-
-
-Upcoming: Lý thuyết Galois dưới góc nhìn phàm trù (dành cho bé), lý thuyết số cho sinh vật đơn bào, lý thuyết biểu diễn dành cho bé,...
+---
+🔗 **Các link hữu ích**
+- [[usefullinks|Một vài trang web hữu ích cho việc học và nghiên cứu Toán học]]
+---
+🚧 **Upcoming:** Lý thuyết Galois dưới góc nhìn phàm trù (dành cho bé), lý thuyết số cho sinh vật đơn bào, lý thuyết biểu diễn dành cho bé,...
