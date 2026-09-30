@@ -16,8 +16,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Lora
-      body: Source Sans Pro
+      title: Mali
+      header: Mali
+      body: Mali
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -97,6 +98,14 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options:
+      useThemeFonts: false
+      fontOrigin: googleFonts
+      title: Mali
+      header: Mali
+      body: Mali
+      interface: Mali
+      code: IBM Plex Mono
   - source: "@quartz-themes/core"
     enabled: false
     options:

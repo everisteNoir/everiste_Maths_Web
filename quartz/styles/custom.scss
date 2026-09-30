@@ -21,7 +21,7 @@ body {
   margin: 0 !important;
 }
 
-.page > #quartz-body {
+.page>#quartz-body {
   width: 100%;
   min-width: 0;
 }
@@ -51,6 +51,7 @@ body {
 .left.sidebar * {
   color: #dcdcdc !important;
 }
+
 .left.sidebar a:hover {
   color: #00d2ff !important;
 }
@@ -61,11 +62,13 @@ body {
   margin-bottom: 2rem !important;
   font-size: 1.25rem !important;
 }
+
 .left.sidebar .graph {
   order: 2 !important;
   flex-shrink: 0;
   margin-bottom: 1.5rem !important;
 }
+
 .left.sidebar footer {
   order: 99 !important;
   flex-shrink: 0;
@@ -151,7 +154,8 @@ button.darkmode:hover {
   position: relative !important;
   padding: 3rem 4rem !important;
   padding-top: 0.5rem !important;
-  border-top: 3px solid #007acc !important; /* Xanh dương */
+  border-top: 3px solid #007acc !important;
+  /* Xanh dương */
   border-radius: 4px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
   min-height: calc(100vh - 150px) !important;
@@ -171,14 +175,14 @@ button.darkmode:hover {
   font-size: clamp(2rem, 4vw, 3rem) !important;
   line-height: 1.1;
   text-align: center;
-  font-family: "Lora", "Merriweather", serif !important;
+  font-family: var(--headerFont) !important;
   color: #b7b7b7 !important;
   white-space: normal !important;
   text-wrap: balance;
 }
 
-.center > header,
-.center > article,
+.center>header,
+.center>article,
 .page-header {
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -190,9 +194,9 @@ button.darkmode:hover {
   padding-top: 0 !important;
 }
 
-article > h1:first-child,
-article > h2:first-child,
-article > p:first-child {
+article>h1:first-child,
+article>h2:first-child,
+article>p:first-child {
   margin-top: 0 !important;
 }
 
@@ -259,7 +263,7 @@ article > p:first-child {
   display: none !important;
 }
 
-.explorer > button {
+.explorer>button {
   pointer-events: auto !important;
   cursor: pointer !important;
 }
@@ -277,24 +281,25 @@ article > p:first-child {
   stroke: #dcdcdc !important;
 }
 
-.explorer > button > svg:first-child {
+.explorer>button>svg:first-child {
   display: block !important;
 }
 
 // ==========================================
 // 6. XỬ LÝ CHUYỂN ĐỔI: LIGHT MODE VÀ DARK MODE
 // ==========================================
-
 /* --- A. Trạng thái Light Mode (Mặc định) --- */
 html[saved-theme="light"] .center * {
   color: #333333 !important;
 }
+
 html[saved-theme="light"] .center h1,
 html[saved-theme="light"] .center h2,
 html[saved-theme="light"] .center h3 {
   color: #111111 !important;
   font-weight: 600 !important;
 }
+
 html[saved-theme="light"] .center a {
   color: #007acc !important;
   text-decoration: none !important;
@@ -310,12 +315,14 @@ html[saved-theme="dark"] .center {
 html[saved-theme="dark"] .center * {
   color: #e0e0e0 !important;
 }
+
 html[saved-theme="dark"] .center h1,
 html[saved-theme="dark"] .center h2,
 html[saved-theme="dark"] .center h3 {
   color: #ffffff !important;
   font-weight: 600 !important;
 }
+
 html[saved-theme="dark"] .center a {
   color: #4b89f3 !important;
   text-decoration: none !important;
@@ -340,7 +347,7 @@ html[saved-theme="dark"] .center h1.article-title,
     padding: 2rem 1.25rem !important;
   }
 
-  .right.sidebar > .flex-component {
+  .right.sidebar>.flex-component {
     width: 100%;
   }
 }
@@ -355,11 +362,11 @@ html[saved-theme="dark"] .center h1.article-title,
     scrollbar-gutter: auto;
   }
 
-  .right.sidebar > * {
+  .right.sidebar>* {
     max-height: none !important;
   }
 
-  .right.sidebar > .flex-component {
+  .right.sidebar>.flex-component {
     width: 100%;
   }
 }
@@ -367,7 +374,7 @@ html[saved-theme="dark"] .center h1.article-title,
 // Compact desktop: keep three columns, but collapse both side rails so that
 // browser side panels and narrower windows cannot force horizontal overflow.
 @media all and (min-width: 1000px) and (max-width: 1399px) {
-  .page > #quartz-body {
+  .page>#quartz-body {
     grid-template-columns: 150px minmax(0, 1fr) 220px !important;
     grid-template-rows: auto auto auto !important;
     grid-template-areas:
@@ -405,7 +412,7 @@ html[saved-theme="dark"] .center h1.article-title,
     overflow-y: auto !important;
   }
 
-  .right.sidebar > .flex-component {
+  .right.sidebar>.flex-component {
     width: 100%;
   }
 
@@ -417,7 +424,7 @@ html[saved-theme="dark"] .center h1.article-title,
 
 // Tablet: use a slim HOME rail and move Search/Explorer underneath the article.
 @media all and (min-width: 801px) and (max-width: 999px) {
-  .page > #quartz-body {
+  .page>#quartz-body {
     grid-template-columns: 140px minmax(0, 1fr) !important;
     grid-template-rows: auto auto auto auto !important;
     grid-template-areas:
@@ -453,7 +460,7 @@ html[saved-theme="dark"] .center h1.article-title,
 }
 
 @media all and (max-width: 800px) {
-  .page > #quartz-body {
+  .page>#quartz-body {
     grid-template-areas:
       "grid-sidebar-left"
       "grid-sidebar-right"
@@ -521,6 +528,7 @@ html[saved-theme="dark"] .center h1.article-title,
 }
 
 @media all and (max-height: 560px) and (min-width: 1000px) {
+
   .left.sidebar,
   .right.sidebar {
     padding-top: 1rem !important;
