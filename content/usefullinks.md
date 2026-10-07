@@ -21,6 +21,7 @@ Danh sách này bao gồm trang cá nhân của các nhà toán học, thư vi�
 - [Encyclopedia of Mathematics](https://encyclopediaofmath.org/) — Bách khoa toàn thư học thuật với các mục từ thuộc nhiều chuyên ngành Toán học, thường đi kèm tài liệu tham khảo.
 - [LMFDB](https://www.lmfdb.org/) — Cơ sở dữ liệu về các đối tượng liên quan đến lý thuyết số, chẳng hạn trường số, dạng môđun và các đối tượng số học khác.
 - [OEIS](https://oeis.org/) — Cơ sở dữ liệu các dãy số nguyên; hữu ích khi nhận diện một dãy, kiểm tra ví dụ hoặc tìm các mối liên hệ bất ngờ.
+- [NumberTheory](http://numbertheory.org/) —  Tập hợp các trang web liên quan đến Lý thuyết số.
 ## Tìm kiếm và tra cứu bài báo
 
 - [arXiv](https://arxiv.org/) — Kho bản thảo khoa học công khai; rất hữu ích để tiếp cận các nghiên cứu mới, nhưng nhiều bản thảo chưa qua bình duyệt.
